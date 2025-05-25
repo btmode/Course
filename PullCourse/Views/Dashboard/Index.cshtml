@@ -1,0 +1,47 @@
+@model List<PullCourse.Models.Course>
+@{
+    var currentCity = ViewBag.CurrentCity ?? "tlt";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы валют (@currentCity.ToUpper())</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="currency-page" data-current-city="@currentCity">
+<div class="currency-container">
+    <h1 class="currency-title">КУРСЫ ВАЛЮТ</h1>
+
+    <div class="city-time">
+        <div class="city-badge">@currentCity.ToUpper()</div>
+        <div class="time-display" id="current-time"></div>
+    </div>
+
+    <table class="currency-table">
+        <thead>
+        <tr>
+            <th>ВАЛЮТА</th>
+            <th>ПОКУПКА</th>
+            <th>ПРОДАЖА</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var course in Model)
+        {
+            <tr data-code="@course.CurrencyCode">
+                <td>@course.CurrencyCode</td>
+                <td class="buy-rate">@course.Buy.ToString("0.00")</td>
+                <td class="sell-rate">@course.Sell.ToString("0.00")</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+<script src="~/js/site.js"></script>
+</body>
+</html>

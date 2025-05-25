@@ -1,0 +1,117 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+/* Основные стили для страницы курсов валют */
+body.currency-page {
+  font-family: 'Arial', sans-serif;
+  background: #121212;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.currency-container {
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.currency-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+.city-time {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.city-badge {
+  font-size: 1.5rem;
+  background: #333;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.time-display {
+  font-size: 1.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.currency-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.currency-table th {
+  background: #333;
+  color: white;
+  padding: 15px;
+  font-weight: normal;
+}
+
+.currency-table td {
+  padding: 15px;
+  border-bottom: 1px solid #333;
+}
+
+.currency-table tr:last-child td {
+  border-bottom: none;
+}
+
+/*  анимации для изменения курса */
+@keyframes flash {
+  0% { background-color: transparent; }
+  20% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { background-color: transparent; }
+}
+
+.flash-up {
+  animation: flash 1s ease;
+  background-color: rgba(76, 175, 80, 0.7); 
+}
+
+.flash-down {
+  animation: flash 1s ease;
+  background-color: rgba(244, 67, 54, 0.7); 
+}
