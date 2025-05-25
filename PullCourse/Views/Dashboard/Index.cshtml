@@ -1,0 +1,128 @@
+@model List<PullCourse.Models.Course>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Курсы валют</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #009879;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f3f3f3;
+        }
+
+        .highlight-up {
+            background-color: #d4edda !important; /* light green */
+            transition: background-color 1s ease;
+        }
+
+        .highlight-down {
+            background-color: #f8d7da !important; /* light red */
+            transition: background-color 1s ease;
+        }
+    </style>
+</head>
+<body>
+
+<h2>📊 Курсы валют</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Валюта</th>
+        <th>Покупка</th>
+        <th>Продажа</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var course in Model)
+    {
+        <tr data-code="@course.CurrencyCode">
+            <td>@course.CurrencyCode</td>
+            <td class="buy">@course.Buy</td>
+            <td class="sell">@course.Sell</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/currencyHub")
+        .build();
+
+    connection.on("ReceiveUpdate", function (message) {
+        try {
+            const data = JSON.parse(message);
+            console.log("Пришли данные:", data);
+
+            const row = document.querySelector(`[data-code='${data.CurrencyCode}']`);
+
+            if (row) {
+                updateCell(row.querySelector('.buy'), data.Buy);
+                updateCell(row.querySelector('.sell'), data.Sell);
+            } else {
+                const table = document.querySelector("tbody");
+                const tr = document.createElement("tr");
+                tr.setAttribute("data-code", data.CurrencyCode);
+                tr.innerHTML = `
+                    <td>${data.CurrencyCode}</td>
+                    <td class="buy">${data.Buy}</td>
+                    <td class="sell">${data.Sell}</td>
+                `;
+                table.appendChild(tr);
+            }
+        } catch (e) {
+            console.error("Ошибка при парсинге JSON:", message, e);
+        }
+    });
+
+    function updateCell(cell, newValue) {
+        const oldValue = parseFloat(cell.textContent);
+        const numericNew = parseFloat(newValue);
+        cell.textContent = numericNew.toFixed(2);
+
+        const highlightClass = numericNew > oldValue ? 'highlight-up' : 'highlight-down';
+        cell.classList.add(highlightClass);
+
+        setTimeout(() => {
+            cell.classList.remove(highlightClass);
+        }, 1000);
+    }
+
+    connection.start().catch(err => console.error("Ошибка соединения с SignalR:", err));
+</script>
+
+</body>
+</html>
