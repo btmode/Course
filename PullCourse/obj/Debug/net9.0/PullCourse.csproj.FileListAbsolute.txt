@@ -23,6 +23,10 @@ E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\scopedcss\Views\Shared\_Layo
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\scopedcss\bundle\PullCourse.styles.css
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\scopedcss\projectbundle\PullCourse.bundle.scp.css
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\rz9rauhuuo-61n19gt1b8.gz
+<<<<<<< HEAD
+=======
+E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\lrrokancsu-xtxxf3hu2r.gz
+>>>>>>> 602c8e743a7df97878ff6e6f63cdae25e59e3daa
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\4ct9iyok2r-bqjiyaj88i.gz
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\dnjt2ery8h-c2jlpeoesf.gz
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\0o3twfm847-erw9l3u2r3.gz
@@ -114,6 +118,10 @@ E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\PullCourse.csproj.AssemblyRe
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\PullCourse.csproj.Up2Date
 E:\CourseXML\PullCourse\PullCourse\bin\Debug\net9.0\Npgsql.dll
 E:\CourseXML\PullCourse\PullCourse\bin\Debug\net9.0\Dapper.dll
+<<<<<<< HEAD
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\PullCourse.sourcelink.json
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\q1ubkz04x9-40vhdntp7w.gz
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\lrrokancsu-5luie7s9p5.gz
+=======
+E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\q1ubkz04x9-b9sayid5wm.gz
+>>>>>>> 602c8e743a7df97878ff6e6f63cdae25e59e3daa

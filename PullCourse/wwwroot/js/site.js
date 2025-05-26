@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿// Обновление времени
 function updateTime() {
     const now = new Date();
@@ -93,3 +94,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentCity = document.body.getAttribute('data-current-city');
     initSignalR(currentCity);
 });
+=======
+﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// for details on configuring this project to bundle and minify static web assets.
+
+// Write your JavaScript code.
+>>>>>>> 602c8e743a7df97878ff6e6f63cdae25e59e3daa

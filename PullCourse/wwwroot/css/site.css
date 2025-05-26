@@ -28,6 +28,7 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+<<<<<<< HEAD
 }
 
 /* Основные стили для страницы курсов валют */
@@ -114,4 +115,6 @@ body.currency-page {
 .flash-down {
   animation: flash 1s ease;
   background-color: rgba(244, 67, 54, 0.7); 
+=======
+>>>>>>> 602c8e743a7df97878ff6e6f63cdae25e59e3daa
 }

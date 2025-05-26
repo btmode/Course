@@ -13,6 +13,7 @@ public class DashboardController : Controller
         _courseService = courseService;
     }
 
+<<<<<<< HEAD
     [HttpGet("")]
     public async Task<IActionResult> Index([FromQuery] string office = "tlt")
     {
@@ -25,6 +26,11 @@ public class DashboardController : Controller
         ViewBag.CurrentCity = office; 
         
         
+=======
+    public async Task<IActionResult> Index()
+    {
+        var courses = await _courseService.GetAllCoursesAsync();
+>>>>>>> 602c8e743a7df97878ff6e6f63cdae25e59e3daa
         return View(courses.ToList());
     }
 }
