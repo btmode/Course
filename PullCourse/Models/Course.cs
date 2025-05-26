@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 using System.ComponentModel.DataAnnotations.Schema;
 
-=======
->>>>>>> 602c8e743a7df97878ff6e6f63cdae25e59e3daa
 namespace PullCourse.Models;
 
 public class Course
 {
-<<<<<<< HEAD
     [Column("currency_code")]
     public string CurrencyCode { get; set; }
 
@@ -20,9 +16,3 @@ public class Course
     [Column("city")]
     public string City { get; set; }
 }
-=======
-    public string CurrencyCode { get; set; }
-    public decimal Buy { get; set; }
-    public decimal Sell { get; set; }
-}
->>>>>>> 602c8e743a7df97878ff6e6f63cdae25e59e3daa

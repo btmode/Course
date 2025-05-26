@@ -13,11 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PullCourse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+602c8e743a7df97878ff6e6f63cdae25e59e3daa")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
->>>>>>> 602c8e743a7df97878ff6e6f63cdae25e59e3daa
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b696201414643aabb4f5e70a30c7e005f529654e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PullCourse")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PullCourse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -118,10 +118,9 @@ E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\PullCourse.csproj.AssemblyRe
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\PullCourse.csproj.Up2Date
 E:\CourseXML\PullCourse\PullCourse\bin\Debug\net9.0\Npgsql.dll
 E:\CourseXML\PullCourse\PullCourse\bin\Debug\net9.0\Dapper.dll
-<<<<<<< HEAD
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\PullCourse.sourcelink.json
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\q1ubkz04x9-40vhdntp7w.gz
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\lrrokancsu-5luie7s9p5.gz
-=======
 E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\q1ubkz04x9-b9sayid5wm.gz
->>>>>>> 602c8e743a7df97878ff6e6f63cdae25e59e3daa
+E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\q1ubkz04x9-2rujkn2jwi.gz
+E:\CourseXML\PullCourse\PullCourse\obj\Debug\net9.0\compressed\lrrokancsu-bkxpxvpepj.gz
